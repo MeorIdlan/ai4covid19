@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Appbar section */
+.appbar-container {
+  z-index: 9;
+  height: 60px;
+  width: 100%;
+  background-color: rgba(107,168,234,255);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.appbar-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Helvetica";
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  height: 100%;
+  margin: 0 30px;
+}
+
+.appbar-grid-item > img {
+  height: 25px;
+}
+
+/* Body section  */
+
+/* .body-container {
+} */
+
+.body-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.body-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+  font-family: "Segoe UI";
+  font-size: 14px;
+  /*border: solid;*/
+
+}
+
+.first-body-item {
+  padding-top: 100px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.confirm-covid-box {
+  width: 60%;
+  height:  50px;
+  background-color: rgba(0, 255, 0, 1.0);
+  color: white;
+  border-radius: 50px;
+}
+
+.confirm-covid-box > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-weight: bold;
+}
+
+.safety-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:  calc(80% - 30px);
+  background-color: rgba(233, 233, 233, 1.0);
+  border-radius: 30px;
+}
+
+.safety-grid-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 7.5px 15px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 1.0);
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.safety-grid-item > img {
+  margin-left: 5px;
+  margin-right: 15px;
+}
+
+.first-safety-item {
+  margin-top: 15px;
+}
+
+.last-safety-item {
+  margin-bottom: 15px;
+}
+
+/* Float action button */
+.floataction-container {
+  margin: auto;
+  position: absolute;
+  top: calc(100vh - 150px); left: 0; bottom: 0; right: 0;
+  width: 80%;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.floataction-container > button {
+  border: none;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(22,43,75,255);
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  font-family: "Segoe UI";
+  font-size: 14px;
+}

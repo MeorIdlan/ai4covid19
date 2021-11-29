@@ -1,0 +1,66 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    height: 1020px;
+    width: 480px;
+    border: 1px solid #ccc;
+    border-radius:30px ;
+    overflow-y: hidden;
+}
+
+section:hover{
+    overflow-y: scroll;
+}
+header{
+    padding: 30px;
+    padding-bottom: 0px;
+
+}
+
+.img{
+    align-items: center;
+}
+
+.profiles{
+    display: grid; 
+    padding: 10px;   
+    padding-bottom: 5px;
+    padding-top: 5px ;
+    margin: 5px;
+
+}
+.profile{
+    background: #F7F7F7;
+    color: rgb(146, 145, 145);
+    padding: 0.1em;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    width: 150px;
+    background-color: #162b4b;
+    justify-content: center;
+    align-items: center;
+    padding: 1.125rem 2rem;
+    border-radius: 0.5rem;
+}
+  
+a{
+    text-decoration: none;
+    color: #ffff;
+    justify-content: center;
+    align-items: center ;
+    
+}
+.buttons:hover {
+    background-color: #893101;
+  }

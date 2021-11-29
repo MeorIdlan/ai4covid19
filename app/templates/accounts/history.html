@@ -1,0 +1,41 @@
+{%load static%}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+	<title>AI4Covid-19 System: History</title>
+	<link rel="stylesheet" href="{% static 'css/history/style.css' %}">
+</head>
+<body>
+      <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo"><h2>History</h2></div>
+      </nav>
+      <div class="navbar-bottom">
+        <a href="{% url 'dashboard' %}" class="nav_link">
+            <img src="{% static 'images/navbar/home_bottom.svg' %}">
+            <span class="nav-text">Home</span>
+        </a>
+        <a href="{% url 'clinic-nearby' %}" class="nav_link">
+            <img src="{% static 'images/navbar/clinic_bottom.svg' %}">
+            <span class="nav-text">Nearby Clinic</span>
+        </a>
+        <a href="{% url 'diagnose' %}" class="nav_link">
+            <span class="nav_link--circle"></span>
+            <img src="{% static 'images/navbar/test_bottom.svg' %}">
+            <span class="nav-text">Diagnose</span>
+        </a>
+        <a href="{% url 'history' %}" class="nav_link">
+            <img src="{% static 'images/navbar/history_bottom.svg' %}">
+            <span class="nav-text">History</span>
+        </a>
+        <a href="{% url 'profile' %}" class="nav_link">
+            <img src="{% static 'images/navbar/user_bottom.svg' %}">
+            <span class="nav-text">Profile</span>
+        </a>
+      </div>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

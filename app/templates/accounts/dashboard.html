@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+	<title>AI4Covid-19 System: Main Menu</title>
+	<link rel="stylesheet" href="{% static 'css/dashboard/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo"><h2>Dashboard</h2></div>
+    </nav>
+    <section>
+            <div class="img-header">
+                <img src="{% static 'images/dashboard/mainMenuVirus.svg' %}" alt="Header">
+                <h3>Welcome back,<br>{{ user.username }}</h3>
+            </div>
+            <div class="text">
+                <h3>What do you want to do?</h3>
+            </div>
+            <div class="buttons">
+                <div class="button">
+                    <a href="{% url 'diagnose' %}">
+                    <img src="{% static 'images/dashboard/iconCough.png' %}" alt="DiagCough" width="50">
+                    <h5>Diagnose</h5>
+                </div>
+                <div class="button">
+                    <a href="{% url 'history' %}">
+                    <img src="{% static 'images/dashboard/iconRecord.png' %}" alt="History" width="50">
+                    <h5>History</h5>
+                </div>
+                <div class="button">
+                    <a href="{% url 'profile' %}">
+                    <img src="{% static 'images/dashboard/iconUser.png' %}" alt="Profile" width="50">
+                    <h5>Profile</h5>
+                </div>
+            </div>
+
+            <div class="maps">
+                <div class="map">
+                    <div class="googleMap">
+                        <img src="{% static 'images/dashboard/maps.jpg' %}" alt="Maps" width="300">
+                    </div>  
+                </div>
+            </div>
+            <div class="maps">
+                <div class="map">
+                    <div class="googleMap">
+                        <img src="{% static 'images/dashboard/maps.jpg' %}" alt="Maps" width="300">
+                    </div>  
+                </div>
+            </div>
+            <div class="maps">
+                <div class="map">
+                    <div class="googleMap">
+                        <img src="{% static 'images/dashboard/maps.jpg' %}" alt="Maps" width="300">
+                    </div>  
+                </div>
+            </div>
+    </section>
+    {% comment %} <button id="btnScrollUp">
+        <img src="{% static 'images/dashboard/arrow_up.svg' %}">
+    </button> {% endcomment %}
+    <div class="navbar-bottom">
+        <a href="{% url 'dashboard' %}" class="nav_link">
+            <img src="{% static 'images/dashboard/home_bottom.svg' %}">
+            <span class="nav-text">Home</span>
+        </a>
+        <a href="{% url 'clinic-nearby' %}" class="nav_link">
+            <img src="{% static 'images/dashboard/clinic_bottom.svg' %}">
+            <span class="nav-text">Nearby Clinic</span>
+        </a>
+        <a href="{% url 'diagnose' %}" class="nav_link">
+            <span class="nav_link--circle"></span>
+            <img src="{% static 'images/dashboard/test_bottom.svg' %}">
+            <span class="nav-text">Diagnose</span>
+        </a>
+        <a href="{% url 'diagnose' %}" class="nav_link">
+            <img src="{% static 'images/dashboard/history_bottom.svg' %}">
+            <span class="nav-text">History</span>
+        </a>
+        <a href="{% url 'profile' %}" class="nav_link">
+            <img src="{% static 'images/dashboard/user_bottom.svg' %}">
+            <span class="nav-text">Profile</span>
+        </a>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <script>
+        const btnScrollUp = document.querySelector("#btnScrollUp")
+        btnScrollUp.addEventListener("click", function(){
+
+           window.scrollTo({
+               top:0,
+               left:0,
+               behavior: "smooth"
+           })
+
+        })
+    </script>
+
+</body>
+</html>

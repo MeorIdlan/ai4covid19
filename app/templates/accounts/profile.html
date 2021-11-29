@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="{% static 'css/profile/style.css' %}" />
+   <title>AI4Covid-19 System: Profile</title>
+   <script type="text/javascript">
+       function redirect() {location.href = '../dashboard'}
+   </script>
+ </head>
+ <body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo"><h2>Profile</h2></div>
+       
+        <!-- NAVIGATION MENU -->
+        <div class="menu-sidebar">
+            <input type="checkbox"/>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="sidebar">
+            <a href="#">Change Full Name</a>
+            <a href="#">Change Username</a>
+            <a href="#">Change Email</a>
+            <a href="#">Change Phone Number</a>
+            <a href="#">Change Password</a>
+        </div>
+    </nav>
+
+    <div class="navbar-bottom">
+        <a href="#" class="nav_link">
+            <img src="{% static 'images/profile/home_bottom.svg' %}">
+            <span class="nav-text">Home</span>
+        </a>
+        <a href="#" class="nav_link">
+            <img src="{% static 'images/profile/clinic_bottom.svg' %}">
+            <span class="nav-text">Nearby Clinic</span>
+        </a>
+        <a href="#" class="nav_link">
+            <span class="nav_link--circle"></span>
+            <img src="{% static 'images/profile/test_bottom.svg' %}">
+            <span class="nav-text">Diagnose</span>
+        </a>
+        <a href="#" class="nav_link">
+            <img src="{% static 'images/profile/history_bottom.svg' %}">
+            <span class="nav-text">History</span>
+        </a>
+        <a href="#" class="nav_link">
+            <img src="{% static 'images/profile/user_bottom.svg' %}">
+            <span class="nav-text">Profile</span>
+        </a>
+    </div>
+
+    <div class="card-container">
+         <div class="upper-container">
+                <div class="back">
+                    <i class="fa fa-solid fa-chevron-left" style="font-size: 35px; color: white"></i>
+                </div>
+                <div class="logout">
+                    <i class="fa fa-solid fa-unlock" style="font-size: 35px; color: white"></i>
+                </div>
+            <div class="image-container">
+               <img src="{% static 'images/profile/user.png' %}"/>
+            </div>
+         </div>
+         
+         <div class="popup">
+             <div class="popup-content">
+                <div id="windowSignOut"><h2>Sign Out?</h2></div>
+                <div id="windowText">
+                    <p>
+                        Sign out will launch welcome wizard.<br> 
+                        Your account will be signed out from the device.
+                    </p>
+                </div>
+                <div class="btnWindowSignOut">
+                    <a href="{% url 'logout' %}" class="btnSignout">Sign Out</a>
+                    <a href="#" class="btnCancel">Cancel</a>
+                </div>
+             </div>
+         </div>
+         <div class="lower-container">
+                <div class="user-icon">
+                <img src="{% static 'images/profile/user-solid.svg' %}" alt="DiagCough" width="20"> &nbsp; &nbsp; &nbsp; &nbsp; N/A
+               </div>
+               <div class="user-icon">
+                <img src="{% static 'images/profile/circle-user-solid.svg' %}" alt="DiagCough" width="20"> &nbsp; &nbsp; &nbsp; &nbsp; {{ user.username }}
+               </div>
+               <div class="user-icon">
+                <img src="{% static 'images/profile/envelope-solid.svg' %}" alt="DiagCough" width="20"> &nbsp; &nbsp; &nbsp; &nbsp; {{ user.email }}
+               </div>
+               <div class="user-icon">
+                <img src="{% static 'images/profile/phone-solid.svg' %}" alt="DiagCough" width="20"> &nbsp; &nbsp; &nbsp; &nbsp; N/A
+               </div>
+               <div class="user-icon">
+                <img src="{% static 'images/profile/lock-solid.svg' %}" alt="DiagCough" width="20"> &nbsp; &nbsp; &nbsp; &nbsp; N/A
+               </div>
+            </div>
+            <div class="buttons">
+                <button onclick="redirect()">BACK</button>
+                <button id="button" type="submit">SIGN OUT</button>
+            </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <script>
+            document.getElementById("button").addEventListener("click", function(){
+            document.querySelector(".popup").style.display="flex";
+            })
+
+            document.querySelector(".btnCancel").addEventListener("click",function(){
+            document.querySelector(".popup").style.display="none";
+            })
+
+            const  menuSidebar = document.querySelector(".menu-sidebar input");
+            const nav = document.querySelector(".navbar .sidebar");
+
+            menuSidebar.addEventListener("click", function(){
+            nav.classList.toggle("slide");
+            })
+      </script>
+
+
+ </body>
+</html>

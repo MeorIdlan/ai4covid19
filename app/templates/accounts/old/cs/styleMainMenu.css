@@ -1,0 +1,79 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+section{
+    height: 1020px;
+    width: 480px;
+    border: 1px solid #ccc;
+    border-radius:30px ;
+    overflow-y: hidden;
+}
+
+section:hover{
+    overflow-y: scroll;
+}
+header{
+    padding: 30px;
+    padding-bottom: 0px;
+
+}
+
+.menu{
+        background: #F7F7F7;
+        padding: 0.5em;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+    }
+
+main{
+    background: #F7F7F7;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    min-height: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.buttons{
+    display: flex; 
+    padding: 10px;   
+    padding-bottom: 0px;
+    padding-top: 0px ;
+
+}
+
+.button{
+    flex: 1;
+    height: 110px;
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.maps{
+    padding: 15px ;
+}
+.map{
+    display: grid;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+.h2{
+        font-size: 1.5rem;
+        color:#162b4b;
+        font-weight: 500;
+        padding-top: 55px;
+    }
+
