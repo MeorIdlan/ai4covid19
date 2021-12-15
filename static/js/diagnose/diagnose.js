@@ -27,16 +27,30 @@ function redirect_dashboard() {
 }
 
 function handlerFunction(stream) {
-    rec = new MediaRecorder(stream); 
-    audioChunks = []; 
+    const rec = new MediaRecorder(stream); 
+    const audioChunks = []; 
     //once the recording is started
     rec.ondataavailable = e => {
         audioChunks.push(e.data); 
     }
     //once the recording is stopped
     rec.onstop = e => { 
-        audioBlob = new Blob(audioChunks, {type:'audio/opus'}); //new blob defined as mp3
-        // recordedAudio.src = URL.createObjectURL(audioBlob); //show the audio file
+        const audioBlob = new Blob(audioChunks, {type:'audio/wav'}); //new blob defined as wav
+        const audioBlobURL = URL.createObjectURL(audioBlob); //show the audio file
+
+        // const audioObj = new Audio(audioBlobURL); // create htmlaudioelement i.e. the audio file
+        // const audioURL = URL.createObjectURL(audioObj); // create url to the audio file
+
+        // script to download from url
+        // however, i think this script only downloads to client device
+        // we needed to upload the audio file to the database instead
+        // var link = document.createElement("a");
+        // link.setAttribute('download', '');
+        // link.href = audioURL;
+        // document.body.appendChild(link);
+        // link.click();
+        // link.remove();
+
         // recordedAudio.controls=true; //allow user to control (e.g. play or download audio)
     }
 }
